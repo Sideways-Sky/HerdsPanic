@@ -1,0 +1,18 @@
+# Proximity of mobs to be considered part of the heard (centered on the mob that was hit)
+radius: 20
+
+# List of EntityTypes (https://jd.papermc.io/paper/1.20/org/bukkit/entity/EntityType.html) to attempt to heard panic
+# Make sure this list only contains mob entity types
+heards:
+  - HORSE
+  - MULE
+  - DONKEY
+  - PIG
+  - CHICKEN
+  - COW
+  - SHEEP
+  - RABBIT
+
+# List of EntityTypes with speed of panic (How fast the mob runs)
+complex-heards:
+  CAMEL: 5.5
