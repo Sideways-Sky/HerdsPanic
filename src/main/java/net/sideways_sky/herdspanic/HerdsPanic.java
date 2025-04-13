@@ -63,9 +63,4 @@ public final class HerdsPanic extends JavaPlugin implements Listener {
             }
         }, delay);
     }
-
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-    }
 }
