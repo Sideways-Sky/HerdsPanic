@@ -1,7 +1,7 @@
 plugins {
     id 'java'
-    id("xyz.jpenilla.run-paper") version "2.3.1"
-    id("io.papermc.paperweight.userdev") version "2.0.0-beta.17"
+    id("xyz.jpenilla.run-paper") version "3.0.2"
+    id("io.papermc.paperweight.userdev") version "2.0.0-beta.19"
 }
 
 group = 'net.sideways_sky'
@@ -20,7 +20,13 @@ repositories {
 }
 
 dependencies {
-    paperweight.paperDevBundle("1.21.6-R0.1-SNAPSHOT")
+    paperweight.paperDevBundle("1.21.8-R0.1-SNAPSHOT")
+}
+
+tasks {
+    runServer {
+        minecraftVersion("1.21.10")
+    }
 }
 
 def targetJavaVersion = 21
@@ -36,15 +42,6 @@ java {
 tasks.withType(JavaCompile).configureEach {
     if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
         options.release.set(targetJavaVersion)
-    }
-}
-
-tasks {
-    assemble {
-        dependsOn(reobfJar)
-    }
-    runServer {
-        minecraftVersion("1.21.6")
     }
 }
 

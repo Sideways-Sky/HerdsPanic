@@ -1,4 +1,0 @@
-name: HerdsPanic
-version: '${version}'
-main: net.sideways_sky.herdspanic.HerdsPanic
-api-version: '1.20'
